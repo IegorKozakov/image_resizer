@@ -24,15 +24,17 @@ db
     app.use(mount('/api', api));
     app.listen(process.env.PORT || 3010);
 
-    request({
-      uri: `${process.env.PROXY_URL}/register-service` || 'http://localhost:3000/register-service',
-      method: 'POST',
-      json: {
-        status: 200,
-        is_alive: true,
-        service_name: 'sso',
-      },
-    });
+    // request({
+    //   uri: process.env.PROXY_URL
+    //     ? `${process.env.PROXY_URL}/register-service`
+    //     : 'http://localhost:3000/register-service',
+    //   method: 'POST',
+    //   json: {
+    //     status: 200,
+    //     is_alive: true,
+    //     service_name: 'sso',
+    //   },
+    // });
   })
   .catch(error => {
     throw new Error(error);

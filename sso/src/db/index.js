@@ -3,8 +3,10 @@ import mongoose from 'mongoose';
 import Imlementation from './implementation';
 import schemas from './schemas';
 
-const dbURI = process.env.mongoParams || 'localhost:27017/practise';
-const dbDebug = process.env.dbDebug || true;
+const dbURI = process.env.mongoParams || 'localhost:4000/resizer';
+const dbDebug = process.env.NODE_ENV === 'development';
+
+console.log(dbDebug);
 
 class DB {
   constructor() {

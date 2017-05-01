@@ -6,8 +6,8 @@
   "author": "Iegor Kozakov <kozakov.e@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./index.js",
-    "develop": "nodemon ./index.js",
+    "start": "NODE_ENV=produnction node ./index.js",
+    "develop": "NODE_ENV=development nodemon ./index.js",
     "lint:js": "eslint ./src",
     "lint-staged": "lint-staged"
   },
